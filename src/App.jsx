@@ -58,15 +58,10 @@ export default function App() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleSubmit = async (e) => {
-  e.preventDefault();
-  const response = await fetch("https://formspree.io/f/mwvjnvzy", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(form),
-  });
-  if (response.ok) setSent(true);
-};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSent(true);
+  };
 
   return (
     <div style={{ fontFamily: "'Inter', sans-serif", background: "#fff", color: "#0F172A" }}>
