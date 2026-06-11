@@ -7,7 +7,6 @@ import {
 
 const NAV_LINKS = [
   { label: "Inicio", href: "#inicio" },
-  { label: "Nosotros", href: "#nosotros" },
   { label: "Servicios", href: "#servicios" },
   { label: "Capacidad", href: "#capacidad" },
   { label: "Contacto", href: "#contacto" },
@@ -38,7 +37,7 @@ const FLEET = [
 ];
 
 const VALUES = [
-  { icon: Globe, title: "Cobertura", desc: "Nacional" },
+  { icon: Globe, title: "Cobertura", desc: "Local y foránea" },
   { icon: Shield, title: "Confianza", desc: "Seguridad en cada envío" },
   { icon: Zap, title: "Eficiencia", desc: "Soluciones ágiles y efectivas" },
   { icon: Handshake, title: "Compromiso", desc: "Servicio confiable y personalizado" },
@@ -65,13 +64,13 @@ export default function App() {
   };
 
   return (
-    <div style={{ fontFamily: "'Inter', sans-serif", background: "#fff", color: "#0F172A" }}>
+    <div style={{ fontFamily: "'Inter', sans-serif", background: "#fff", color: "#0C2340" }}>
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
       {/* NAVBAR */}
       <nav style={{
         position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
-        background: scrolled ? "rgba(15,23,42,0.96)" : "transparent",
+        background: scrolled ? "rgba(12,35,64,0.96)" : "transparent",
         backdropFilter: scrolled ? "blur(12px)" : "none",
         transition: "background 0.3s, backdrop-filter 0.3s",
         borderBottom: scrolled ? "1px solid rgba(255,255,255,0.08)" : "none",
@@ -80,9 +79,9 @@ export default function App() {
         height: 68,
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <Anchor size={24} color="#e79d49" strokeWidth={2.5} />
+          <Anchor size={24} color="#D4A017" strokeWidth={2.5} />
           <span style={{ fontWeight: 800, fontSize: 18, color: "#fff", letterSpacing: "-0.3px" }}>
-            SHIRES <span style={{ color: "#D97706" }}>LOGISTIC</span>
+            SHIRES <span style={{ color: "#D4A017" }}>LOGISTIC</span>
           </span>
         </div>
 
@@ -98,12 +97,12 @@ export default function App() {
             >{l.label}</a>
           ))}
           <a href="#contacto" style={{
-            background: "#D97706", color: "#fff", padding: "9px 20px",
+            background: "#D4A017", color: "#fff", padding: "9px 20px",
             borderRadius: 8, fontSize: 14, fontWeight: 600, textDecoration: "none",
             transition: "background 0.2s",
           }}
-            onMouseEnter={e => e.target.style.background = "#B45309"}
-            onMouseLeave={e => e.target.style.background = "#D97706"}
+            onMouseEnter={e => e.target.style.background = "#A07810"}
+            onMouseLeave={e => e.target.style.background = "#D4A017"}
           >Cotizar ahora</a>
         </div>
 
@@ -120,7 +119,7 @@ export default function App() {
       {menuOpen && (
         <div style={{
           position: "fixed", top: 68, left: 0, right: 0, zIndex: 99,
-          background: "#0F172A", padding: "1.5rem 5%",
+          background: "#0C2340", padding: "1.5rem 5%",
           borderBottom: "1px solid rgba(255,255,255,0.1)",
         }}>
           {NAV_LINKS.map(l => (
@@ -134,7 +133,7 @@ export default function App() {
             >{l.label}</a>
           ))}
           <a href="#contacto" onClick={() => setMenuOpen(false)} style={{
-            display: "block", marginTop: 16, background: "#D97706",
+            display: "block", marginTop: 16, background: "#D4A017",
             color: "#fff", padding: "12px 0", borderRadius: 8,
             textAlign: "center", fontWeight: 600, textDecoration: "none",
           }}>Cotizar ahora</a>
@@ -144,7 +143,7 @@ export default function App() {
       {/* HERO */}
       <section id="inicio" style={{
         minHeight: "100vh",
-        background: "linear-gradient(135deg, #0F172A 0%, #1E3A5F 60%, #0F172A 100%)",
+        background: "linear-gradient(135deg, #0C2340 0%, #0F3460 60%, #0C2340 100%)",
         display: "flex", alignItems: "center",
         position: "relative", overflow: "hidden",
         padding: "100px 5% 60px",
@@ -164,12 +163,16 @@ export default function App() {
           backgroundSize: "60px 60px",
         }} />
 
-        <div style={{ maxWidth: 500, position: "absolute", zIndex: 1 }}>
+        <div style={{ maxWidth: 680, position: "relative", zIndex: 1 }}>
           <div style={{
-           
-           
+            display: "inline-flex", alignItems: "center", gap: 8,
+            background: "rgba(212,160,23,0.15)", border: "1px solid rgba(212,160,23,0.3)",
+            borderRadius: 100, padding: "6px 16px", marginBottom: 28,
           }}>
-           
+            <MapPin size={14} color="#D4A017" />
+            <span style={{ color: "#D4A017", fontSize: 13, fontWeight: 600, letterSpacing: "0.5px" }}>
+              MANZANILLO, COLIMA — PUERTO DE MÉXICO
+            </span>
           </div>
 
           <h1 style={{
@@ -178,7 +181,7 @@ export default function App() {
             letterSpacing: "-0.5px",
           }}>
             Soluciones logísticas{" "}
-            <span style={{ color: "#D97706" }}>integrales</span>,<br />
+            <span style={{ color: "#D4A017" }}>integrales</span>,<br />
             conectando tu carga<br />con el mundo.
           </h1>
 
@@ -192,14 +195,14 @@ export default function App() {
 
           <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
             <a href="#contacto" style={{
-              background: "#D97706", color: "#fff",
+              background: "#D4A017", color: "#fff",
               padding: "14px 28px", borderRadius: 8,
               fontWeight: 700, fontSize: 15, textDecoration: "none",
               display: "flex", alignItems: "center", gap: 8,
               transition: "transform 0.2s, background 0.2s",
             }}
-              onMouseEnter={e => e.currentTarget.style.background = "#B45309"}
-              onMouseLeave={e => e.currentTarget.style.background = "#D97706"}
+              onMouseEnter={e => e.currentTarget.style.background = "#A07810"}
+              onMouseLeave={e => e.currentTarget.style.background = "#D4A017"}
             >
               Solicitar cotización <ArrowRight size={16} />
             </a>
@@ -240,72 +243,14 @@ export default function App() {
         `}</style>
       </section>
 
-      {/* NOSOTROS */}
-      <section id="nosotros" style={{ padding: "80px 5%", background: "#F8FAFC" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 56 }}>
-            <p style={{ color: "#D97706", fontWeight: 700, fontSize: 13, letterSpacing: "2px", marginBottom: 8 }}>
-              FREIGHT FORWARDER
-            </p>
-            <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.5rem)", fontWeight: 800, color: "#0F172A", marginBottom: 14 }}>
-              Nuestros Servicios Logísticos
-            </h2>
-            <p style={{ color: "#64748B", fontSize: 16, maxWidth: 520, margin: "0 auto" }}>
-              Ofrecemos servicios <strong>locales y foráneos</strong> diseñados para mover tu mercancía de forma segura y eficiente.
-            </p>
-          </div>
-
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
-            {SERVICES.map((s, i) => (
-              <div key={i} style={{
-                background: "#fff", borderRadius: 16,
-                border: "1px solid #E2E8F0",
-                padding: "36px 32px",
-                transition: "transform 0.2s, box-shadow 0.2s",
-                cursor: "default",
-              }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.transform = "translateY(-4px)";
-                  e.currentTarget.style.boxShadow = "0 20px 40px rgba(15,23,42,0.1)";
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "none";
-                }}
-              >
-                <div style={{
-                  width: 56, height: 56, background: "rgba(217,119,6,0.1)",
-                  borderRadius: 14, display: "flex", alignItems: "center",
-                  justifyContent: "center", marginBottom: 20,
-                }}>
-                  <s.icon size={26} color="#D97706" strokeWidth={1.8} />
-                </div>
-                <h3 style={{ fontSize: 20, fontWeight: 700, marginBottom: 4, color: "#0F172A" }}>{s.title}</h3>
-                <p style={{ color: "#D97706", fontWeight: 600, fontSize: 13, marginBottom: 14 }}>{s.subtitle}</p>
-                <p style={{ color: "#64748B", fontSize: 15, lineHeight: 1.7, marginBottom: 20 }}>{s.desc}</p>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-                  {s.tags.map(t => (
-                    <span key={t} style={{
-                      background: "#F1F5F9", color: "#475569",
-                      fontSize: 12, fontWeight: 600, padding: "4px 10px",
-                      borderRadius: 6, letterSpacing: "0.3px",
-                    }}>{t}</span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* SERVICES */}
-      <section id="servicios" style={{ padding: "80px 5%", background: "#F8FAFC" }}>
+      <section id="servicios" style={{ padding: "80px 5%", background: "#F0F9FF" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 56 }}>
-            <p style={{ color: "#D97706", fontWeight: 700, fontSize: 13, letterSpacing: "2px", marginBottom: 8 }}>
+            <p style={{ color: "#D4A017", fontWeight: 700, fontSize: 13, letterSpacing: "2px", marginBottom: 8 }}>
               FREIGHT FORWARDER
             </p>
-            <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.5rem)", fontWeight: 800, color: "#0F172A", marginBottom: 14 }}>
+            <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.5rem)", fontWeight: 800, color: "#0C2340", marginBottom: 14 }}>
               Nuestros Servicios Logísticos
             </h2>
             <p style={{ color: "#64748B", fontSize: 16, maxWidth: 520, margin: "0 auto" }}>
@@ -324,7 +269,7 @@ export default function App() {
               }}
                 onMouseEnter={e => {
                   e.currentTarget.style.transform = "translateY(-4px)";
-                  e.currentTarget.style.boxShadow = "0 20px 40px rgba(15,23,42,0.1)";
+                  e.currentTarget.style.boxShadow = "0 20px 40px rgba(12,35,64,0.1)";
                 }}
                 onMouseLeave={e => {
                   e.currentTarget.style.transform = "translateY(0)";
@@ -332,14 +277,14 @@ export default function App() {
                 }}
               >
                 <div style={{
-                  width: 56, height: 56, background: "rgba(217,119,6,0.1)",
+                  width: 56, height: 56, background: "rgba(212,160,23,0.1)",
                   borderRadius: 14, display: "flex", alignItems: "center",
                   justifyContent: "center", marginBottom: 20,
                 }}>
-                  <s.icon size={26} color="#D97706" strokeWidth={1.8} />
+                  <s.icon size={26} color="#D4A017" strokeWidth={1.8} />
                 </div>
-                <h3 style={{ fontSize: 20, fontWeight: 700, marginBottom: 4, color: "#0F172A" }}>{s.title}</h3>
-                <p style={{ color: "#D97706", fontWeight: 600, fontSize: 13, marginBottom: 14 }}>{s.subtitle}</p>
+                <h3 style={{ fontSize: 20, fontWeight: 700, marginBottom: 4, color: "#0C2340" }}>{s.title}</h3>
+                <p style={{ color: "#D4A017", fontWeight: 600, fontSize: 13, marginBottom: 14 }}>{s.subtitle}</p>
                 <p style={{ color: "#64748B", fontSize: 15, lineHeight: 1.7, marginBottom: 20 }}>{s.desc}</p>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                   {s.tags.map(t => (
@@ -357,10 +302,10 @@ export default function App() {
       </section>
 
       {/* CAPACITY */}
-      <section id="capacidad" style={{ padding: "80px 5%", background: "#0F172A" }}>
+      <section id="capacidad" style={{ padding: "80px 5%", background: "#0C2340" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 52 }}>
-            <p style={{ color: "#D97706", fontWeight: 700, fontSize: 13, letterSpacing: "2px", marginBottom: 8 }}>
+            <p style={{ color: "#D4A017", fontWeight: 700, fontSize: 13, letterSpacing: "2px", marginBottom: 8 }}>
               GESTIÓN DE UNIDADES
             </p>
             <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)", fontWeight: 800, color: "#fff", marginBottom: 14 }}>
@@ -381,8 +326,8 @@ export default function App() {
                 transition: "background 0.2s, border-color 0.2s",
               }}
                 onMouseEnter={e => {
-                  e.currentTarget.style.background = "rgba(217,119,6,0.1)";
-                  e.currentTarget.style.borderColor = "rgba(217,119,6,0.4)";
+                  e.currentTarget.style.background = "rgba(212,160,23,0.1)";
+                  e.currentTarget.style.borderColor = "rgba(212,160,23,0.4)";
                 }}
                 onMouseLeave={e => {
                   e.currentTarget.style.background = "rgba(255,255,255,0.05)";
@@ -390,11 +335,11 @@ export default function App() {
                 }}
               >
                 <div style={{
-                  width: 42, height: 42, background: "rgba(217,119,6,0.15)",
+                  width: 42, height: 42, background: "rgba(212,160,23,0.15)",
                   borderRadius: 10, display: "flex", alignItems: "center",
                   justifyContent: "center", flexShrink: 0,
                 }}>
-                  <f.icon size={20} color="#D97706" strokeWidth={1.8} />
+                  <f.icon size={20} color="#D4A017" strokeWidth={1.8} />
                 </div>
                 <div>
                   <p style={{ color: "#fff", fontWeight: 700, fontSize: 15, marginBottom: 3 }}>{f.label}</p>
@@ -410,10 +355,10 @@ export default function App() {
       <section style={{ padding: "80px 5%", background: "#fff" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 52 }}>
-            <p style={{ color: "#D97706", fontWeight: 700, fontSize: 13, letterSpacing: "2px", marginBottom: 8 }}>
+            <p style={{ color: "#D4A017", fontWeight: 700, fontSize: 13, letterSpacing: "2px", marginBottom: 8 }}>
               POR QUÉ ELEGIRNOS
             </p>
-            <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)", fontWeight: 800, color: "#0F172A" }}>
+            <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)", fontWeight: 800, color: "#0C2340" }}>
               Lo que nos distingue
             </h2>
           </div>
@@ -426,7 +371,7 @@ export default function App() {
                 transition: "border-color 0.2s, transform 0.2s",
               }}
                 onMouseEnter={e => {
-                  e.currentTarget.style.borderColor = "#D97706";
+                  e.currentTarget.style.borderColor = "#D4A017";
                   e.currentTarget.style.transform = "translateY(-3px)";
                 }}
                 onMouseLeave={e => {
@@ -435,13 +380,13 @@ export default function App() {
                 }}
               >
                 <div style={{
-                  width: 60, height: 60, background: "#FEF3C7",
+                  width: 60, height: 60, background: "#FEFCE8",
                   borderRadius: "50%", display: "flex", alignItems: "center",
                   justifyContent: "center", margin: "0 auto 16px",
                 }}>
-                  <v.icon size={26} color="#D97706" strokeWidth={1.8} />
+                  <v.icon size={26} color="#D4A017" strokeWidth={1.8} />
                 </div>
-                <h3 style={{ fontSize: 17, fontWeight: 700, color: "#0F172A", marginBottom: 6 }}>{v.title}</h3>
+                <h3 style={{ fontSize: 17, fontWeight: 700, color: "#0C2340", marginBottom: 6 }}>{v.title}</h3>
                 <p style={{ color: "#64748B", fontSize: 14 }}>{v.desc}</p>
               </div>
             ))}
@@ -450,13 +395,13 @@ export default function App() {
       </section>
 
       {/* CONTACT */}
-      <section id="contacto" style={{ padding: "80px 5%", background: "#F8FAFC" }}>
+      <section id="contacto" style={{ padding: "80px 5%", background: "#F0F9FF" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 52 }}>
-            <p style={{ color: "#D97706", fontWeight: 700, fontSize: 13, letterSpacing: "2px", marginBottom: 8 }}>
+            <p style={{ color: "#D4A017", fontWeight: 700, fontSize: 13, letterSpacing: "2px", marginBottom: 8 }}>
               CONTACTO
             </p>
-            <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)", fontWeight: 800, color: "#0F172A", marginBottom: 10 }}>
+            <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)", fontWeight: 800, color: "#0C2340", marginBottom: 10 }}>
               Cotiza tu Envío
             </h2>
             <p style={{ color: "#64748B", fontSize: 15, maxWidth: 480, margin: "0 auto" }}>
@@ -470,13 +415,13 @@ export default function App() {
               {sent ? (
                 <div style={{ textAlign: "center", padding: "40px 0" }}>
                   <div style={{
-                    width: 64, height: 64, background: "#DCFCE7",
+                    width: 64, height: 64, background: "#DBEAFE",
                     borderRadius: "50%", display: "flex", alignItems: "center",
                     justifyContent: "center", margin: "0 auto 16px",
                   }}>
-                    <Zap size={28} color="#16A34A" />
+                    <Zap size={28} color="#185FA5" />
                   </div>
-                  <h3 style={{ fontSize: 20, fontWeight: 700, color: "#0F172A", marginBottom: 8 }}>¡Solicitud enviada!</h3>
+                  <h3 style={{ fontSize: 20, fontWeight: 700, color: "#0C2340", marginBottom: 8 }}>¡Solicitud enviada!</h3>
                   <p style={{ color: "#64748B", fontSize: 14 }}>Un asesor te contactará pronto.</p>
                 </div>
               ) : (
@@ -553,13 +498,13 @@ export default function App() {
                   </div>
 
                   <button type="submit" style={{
-                    background: "#D97706", color: "#fff", border: "none",
+                    background: "#D4A017", color: "#fff", border: "none",
                     padding: "13px", borderRadius: 8, fontWeight: 700,
                     fontSize: 15, cursor: "pointer", fontFamily: "inherit",
                     transition: "background 0.2s", marginTop: 4,
                   }}
-                    onMouseEnter={e => e.target.style.background = "#B45309"}
-                    onMouseLeave={e => e.target.style.background = "#D97706"}
+                    onMouseEnter={e => e.target.style.background = "#A07810"}
+                    onMouseLeave={e => e.target.style.background = "#D4A017"}
                   >
                     Enviar Solicitud
                   </button>
@@ -570,7 +515,7 @@ export default function App() {
             {/* Contact info */}
             <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
               <div style={{
-                background: "#0F172A", borderRadius: 16, padding: "32px 28px", color: "#fff",
+                background: "#0C2340", borderRadius: 16, padding: "32px 28px", color: "#fff",
               }}>
                 <h3 style={{ fontSize: 18, fontWeight: 700, marginBottom: 20, color: "#fff" }}>
                   Información de contacto
@@ -585,11 +530,11 @@ export default function App() {
                     paddingBottom: 20, borderBottom: i < 2 ? "1px solid rgba(255,255,255,0.08)" : "none",
                   }}>
                     <div style={{
-                      width: 40, height: 40, background: "rgba(217,119,6,0.15)",
+                      width: 40, height: 40, background: "rgba(212,160,23,0.15)",
                       borderRadius: 10, display: "flex", alignItems: "center",
                       justifyContent: "center", flexShrink: 0,
                     }}>
-                      <c.icon size={18} color="#D97706" strokeWidth={1.8} />
+                      <c.icon size={18} color="#D4A017" strokeWidth={1.8} />
                     </div>
                     <div>
                       <p style={{ color: "rgba(255,255,255,0.4)", fontSize: 12, fontWeight: 600, marginBottom: 4, letterSpacing: "0.5px" }}>
@@ -604,14 +549,14 @@ export default function App() {
               </div>
 
               <div style={{
-                background: "#FEF3C7", borderRadius: 14, padding: "22px 24px",
-                border: "1px solid #FDE68A",
+                background: "#FEFCE8", borderRadius: 14, padding: "22px 24px",
+                border: "1px solid #FEF08A",
               }}>
-                <p style={{ color: "#92400E", fontSize: 13, fontWeight: 700, marginBottom: 4 }}>
+                <p style={{ color: "#713F12", fontSize: 13, fontWeight: 700, marginBottom: 4 }}>
                   Tiempo de respuesta
                 </p>
-                <p style={{ color: "#78350F", fontSize: 22, fontWeight: 800 }}>Menos de 2 horas</p>
-                <p style={{ color: "#92400E", fontSize: 13, marginTop: 4 }}>
+                <p style={{ color: "#713F12", fontSize: 22, fontWeight: 800 }}>Menos de 2 horas</p>
+                <p style={{ color: "#713F12", fontSize: 13, marginTop: 4 }}>
                   En horario hábil, lunes a viernes.
                 </p>
               </div>
@@ -622,13 +567,13 @@ export default function App() {
 
       {/* FOOTER */}
       <footer style={{
-        background: "#0F172A", padding: "28px 5%",
+        background: "#0C2340", padding: "28px 5%",
         display: "flex", alignItems: "center", justifyContent: "space-between",
         flexWrap: "wrap", gap: 12,
         borderTop: "1px solid rgba(255,255,255,0.06)",
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <Anchor size={18} color="#D97706" />
+          <Anchor size={18} color="#D4A017" />
           <span style={{ color: "rgba(255,255,255,0.6)", fontSize: 13 }}>
             © 2026 Shires Logistic. Todos los derechos reservados.
           </span>
