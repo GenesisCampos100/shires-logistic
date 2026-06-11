@@ -80,7 +80,7 @@ export default function App() {
         height: 68,
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <Anchor size={24} color="#D97706" strokeWidth={2.5} />
+          <Anchor size={24} color="#e79d49" strokeWidth={2.5} />
           <span style={{ fontWeight: 800, fontSize: 18, color: "#fff", letterSpacing: "-0.3px" }}>
             SHIRES <span style={{ color: "#D97706" }}>LOGISTIC</span>
           </span>
@@ -164,16 +164,12 @@ export default function App() {
           backgroundSize: "60px 60px",
         }} />
 
-        <div style={{ maxWidth: 680, position: "relative", zIndex: 1 }}>
+        <div style={{ maxWidth: 500, position: "absolute", zIndex: 1 }}>
           <div style={{
-            display: "inline-flex", alignItems: "center", gap: 8,
-            background: "rgba(217,119,6,0.15)", border: "1px solid rgba(217,119,6,0.3)",
-            borderRadius: 100, padding: "6px 16px", marginBottom: 28,
+           
+           
           }}>
-            <MapPin size={14} color="#D97706" />
-            <span style={{ color: "#D97706", fontSize: 13, fontWeight: 600, letterSpacing: "0.5px" }}>
-              MANZANILLO, COLIMA — PUERTO DE MÉXICO
-            </span>
+           
           </div>
 
           <h1 style={{
@@ -244,107 +240,62 @@ export default function App() {
         `}</style>
       </section>
 
-      {/* NOSOSTROS */}
-      <section id="nosotros" style={{
-        minHeight: "100vh",
-        background: "linear-gradient(135deg, #0F172A 0%, #1E3A5F 60%, #0F172A 100%)",
-        display: "flex", alignItems: "center",
-        position: "relative", overflow: "hidden",
-        padding: "100px 5% 60px",
-      }}>
-        {/* Decorative port silhouette */}
-        <div style={{
-          position: "absolute", bottom: 0, right: 0, left: 0,
-          height: 200, opacity: 0.06,
-          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200'%3E%3Crect x='0' y='100' width='1200' height='100' fill='white'/%3E%3Crect x='100' y='60' width='20' height='40' fill='white'/%3E%3Crect x='200' y='40' width='30' height='60' fill='white'/%3E%3Crect x='400' y='50' width='25' height='50' fill='white'/%3E%3Crect x='600' y='30' width='40' height='70' fill='white'/%3E%3Crect x='800' y='45' width='20' height='55' fill='white'/%3E%3Crect x='1000' y='55' width='30' height='45' fill='white'/%3E%3C/svg%3E")`,
-          backgroundSize: "cover",
-        }} />
-
-        {/* Grid lines */}
-        <div style={{
-          position: "absolute", inset: 0, opacity: 0.04,
-          backgroundImage: "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-        }} />
-
-        <div style={{ maxWidth: 680, position: "relative", zIndex: 1 }}>
-          <div style={{
-            display: "inline-flex", alignItems: "center", gap: 8,
-            background: "rgba(217,119,6,0.15)", border: "1px solid rgba(217,119,6,0.3)",
-            borderRadius: 100, padding: "6px 16px", marginBottom: 28,
-          }}>
-            <MapPin size={14} color="#D97706" />
-            <span style={{ color: "#D97706", fontSize: 13, fontWeight: 600, letterSpacing: "0.5px" }}>
-              MANZANILLO, COLIMA — PUERTO DE MÉXICO
-            </span>
+      {/* NOSOTROS */}
+      <section id="nosotros" style={{ padding: "80px 5%", background: "#F8FAFC" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: 56 }}>
+            <p style={{ color: "#D97706", fontWeight: 700, fontSize: 13, letterSpacing: "2px", marginBottom: 8 }}>
+              FREIGHT FORWARDER
+            </p>
+            <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.5rem)", fontWeight: 800, color: "#0F172A", marginBottom: 14 }}>
+              Nuestros Servicios Logísticos
+            </h2>
+            <p style={{ color: "#64748B", fontSize: 16, maxWidth: 520, margin: "0 auto" }}>
+              Ofrecemos servicios <strong>locales y foráneos</strong> diseñados para mover tu mercancía de forma segura y eficiente.
+            </p>
           </div>
 
-          <h1 style={{
-            fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 800,
-            color: "#fff", lineHeight: 1.15, marginBottom: 20,
-            letterSpacing: "-0.5px",
-          }}>
-            Soluciones logísticas{" "}
-            <span style={{ color: "#D97706" }}>integrales</span>,<br />
-            conectando tu carga<br />con el mundo.
-          </h1>
-
-          <p style={{
-            fontSize: "clamp(1rem, 2vw, 1.2rem)", color: "rgba(255,255,255,0.65)",
-            marginBottom: 40, lineHeight: 1.7, maxWidth: 520,
-          }}>
-            Nuestra base en Manzanillo es tu conexión estratégica al mercado global.
-            Freight forwarder con cobertura local y foránea.
-          </p>
-
-          <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
-            <a href="#contacto" style={{
-              background: "#D97706", color: "#fff",
-              padding: "14px 28px", borderRadius: 8,
-              fontWeight: 700, fontSize: 15, textDecoration: "none",
-              display: "flex", alignItems: "center", gap: 8,
-              transition: "transform 0.2s, background 0.2s",
-            }}
-              onMouseEnter={e => e.currentTarget.style.background = "#B45309"}
-              onMouseLeave={e => e.currentTarget.style.background = "#D97706"}
-            >
-              Solicitar cotización <ArrowRight size={16} />
-            </a>
-            <a href="#servicios" style={{
-              background: "rgba(255,255,255,0.08)", color: "#fff",
-              border: "1px solid rgba(255,255,255,0.2)",
-              padding: "14px 28px", borderRadius: 8,
-              fontWeight: 600, fontSize: 15, textDecoration: "none",
-              transition: "background 0.2s",
-            }}
-              onMouseEnter={e => e.currentTarget.style.background = "rgba(255,255,255,0.14)"}
-              onMouseLeave={e => e.currentTarget.style.background = "rgba(255,255,255,0.08)"}
-            >
-              Nuestros servicios
-            </a>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 24 }}>
+            {SERVICES.map((s, i) => (
+              <div key={i} style={{
+                background: "#fff", borderRadius: 16,
+                border: "1px solid #E2E8F0",
+                padding: "36px 32px",
+                transition: "transform 0.2s, box-shadow 0.2s",
+                cursor: "default",
+              }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.transform = "translateY(-4px)";
+                  e.currentTarget.style.boxShadow = "0 20px 40px rgba(15,23,42,0.1)";
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.boxShadow = "none";
+                }}
+              >
+                <div style={{
+                  width: 56, height: 56, background: "rgba(217,119,6,0.1)",
+                  borderRadius: 14, display: "flex", alignItems: "center",
+                  justifyContent: "center", marginBottom: 20,
+                }}>
+                  <s.icon size={26} color="#D97706" strokeWidth={1.8} />
+                </div>
+                <h3 style={{ fontSize: 20, fontWeight: 700, marginBottom: 4, color: "#0F172A" }}>{s.title}</h3>
+                <p style={{ color: "#D97706", fontWeight: 600, fontSize: 13, marginBottom: 14 }}>{s.subtitle}</p>
+                <p style={{ color: "#64748B", fontSize: 15, lineHeight: 1.7, marginBottom: 20 }}>{s.desc}</p>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                  {s.tags.map(t => (
+                    <span key={t} style={{
+                      background: "#F1F5F9", color: "#475569",
+                      fontSize: 12, fontWeight: 600, padding: "4px 10px",
+                      borderRadius: 6, letterSpacing: "0.3px",
+                    }}>{t}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-
-        {/* Scroll indicator */}
-        <a href="#servicios" style={{
-          position: "absolute", bottom: 32, left: "50%", transform: "translateX(-50%)",
-          color: "rgba(255,255,255,0.4)", display: "flex", flexDirection: "column",
-          alignItems: "center", gap: 6, textDecoration: "none", fontSize: 11,
-          letterSpacing: "1px", fontWeight: 500,
-        }}>
-          SCROLL
-          <ChevronDown size={18} style={{ animation: "bounce 2s infinite" }} />
-        </a>
-
-        <style>{`
-          @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
-          .desktop-nav { display: flex !important; }
-          .mobile-menu-btn { display: none !important; }
-          @media (max-width: 768px) {
-            .desktop-nav { display: none !important; }
-            .mobile-menu-btn { display: block !important; }
-          }
-        `}</style>
       </section>
 
       {/* SERVICES */}
