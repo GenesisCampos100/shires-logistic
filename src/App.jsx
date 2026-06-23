@@ -741,7 +741,7 @@ useEffect(() => {
 
               {/* Texto o pasos */}
               {item.text ? (
-                <p style={{ color: "rgba(255,255,255,0.58)", fontSize: 14, lineHeight: 1.85, margin: 0, textAlign: "left" }}>
+                <p style={{ color: "rgba(255,255,255,0.58)", fontSize: 14, lineHeight: 1.85, margin: 0, textAlign: "justify" }}>
                   {item.text}
                 </p>
               ) : (
@@ -789,7 +789,7 @@ useEffect(() => {
         </div>
 
         {/* UBICACIÓN — tarjeta destacada */}
-        <div className="reveal" style={{
+        <div className="reveal location-card" style={{
           background: "#fff",
           borderRadius: 16,
           padding: "28px 32px",
@@ -905,8 +905,8 @@ useEffect(() => {
                   <f.icon size={20} color={C.accent} strokeWidth={1.8} />
                 </div>
                 <div>
-                  <p style={{ color: "#fff", fontWeight: 700, fontSize: 15, marginBottom: 3 }}>{f.label}</p>
-                  <p style={{ color: "rgba(255,255,255,0.45)", fontSize: 13 }}>{f.detail}</p>
+                  <p style={{ color: "#fff", fontWeight: 700, fontSize: 15, marginBottom: 3, textAlign: "left" }}>{f.label}</p>
+                  <p style={{ color: "rgba(255,255,255,0.45)", fontSize: 13, textAlign: "left" }}>{f.detail}</p>
                 </div>
               </div>
             ))}
