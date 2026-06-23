@@ -389,8 +389,8 @@ useEffect(() => {
     // Si llegamos aqui, todos los campos son validos. Procedemos con el envio.
     try {
       await emailjs.send(
-        "service_o2tngrq",    // de EmailJS → Email Services
-        "template_m6yid5n",   // de EmailJS → Email Templates
+        "service_l0dtc7s",    // de EmailJS → Email Services
+        "template_3ebzojz",   // de EmailJS → Email Templates
         {
           nombre:     form.name,
           empresa:    form.company,
@@ -400,7 +400,7 @@ useEffect(() => {
           ruta:       form.route,
           mensaje:    form.message || "Sin mensaje adicional",
         },
-        "oh2ncoVyg5sAW339k"   // de EmailJS → Account → Public Key
+        "Nm0AAAQ9NEZK2ctTZ"   // de EmailJS → Account → Public Key
       );
 
       // Reseteamos el formulario y los estados de validacion
