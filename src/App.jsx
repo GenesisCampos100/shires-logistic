@@ -24,20 +24,20 @@ import emailjs from "@emailjs/browser";
 // Asi si quieres cambiar un color, solo lo cambias aqui y se actualiza en todo.
 // ============================================================
 const C = {
-  primary: "#0F3460",      // azul marino oscuro - color principal de fondo
-  primaryMid: "#0F3460",   // azul marino medio (reservado para uso futuro)
-  accent: "#C9A84C",       // dorado - color de acento para botones y destacados
-  accentHover: "#A8872E",  // dorado mas oscuro - se usa al pasar el mouse sobre botones dorados
-  bg: "#F7F9FC",           // gris muy claro - fondo general de las secciones blancas
-  bgAlt: "#EEF2F7",        // gris claro - fondo de secciones alternas
-  bgCard: "#FFFFFF",       // blanco puro - fondo de las tarjetas de servicios
-  text: "#0D1B2A",         // casi negro - color del texto principal
-  textMuted: "#64748B",    // gris azulado - texto secundario y descripciones
-  border: "#D6E0ED",       // gris azulado claro - bordes de tarjetas y separadores
-  contactBg: "#0D1B2A",    // mismo que primary - fondo del bloque de info de contacto
-  timeBg: "#FFFDF5",       // crema muy claro - fondo de la caja de tiempo de respuesta
-  timeText: "#7A5C1A",     // cafe dorado - texto dentro de la caja de tiempo de respuesta
-  timeBorder: "#F0DFA0",   // amarillo palido - borde de la caja de tiempo de respuesta
+  primary: "#112240",      // azul noche profundo
+  primaryMid: "#112240",
+  accent: "#E8B400",       // amarillo faro - como las luces del puerto de noche
+  accentHover: "#C49A00",
+  bg: "#F6F8FB",
+  bgAlt: "#EDF1F7",
+  bgCard: "#FFFFFF",
+  text: "#0C1B2E",
+  textMuted: "#607590",
+  border: "#C9D6E8",
+  contactBg: "#0C1B2E",
+  timeBg: "#FFFCE8",
+  timeText: "#6B5200",
+  timeBorder: "#EDD870",
 };
 
 // ============================================================
